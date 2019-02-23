@@ -1,19 +1,3 @@
-# MPL_AnnoDeoverlap2D
-Aim to adjust (matplotlib) annotation text objects to minimize overlapping in 2-D plot.
-
-
-# Dependencies
-
-* Python >= 3.3.0
-* Numpy >= 1.14.0
-* boost::numeric::odeint
-* C++11 compatible C++ compiler (G++/Clang++)
-* GNU make
-
-
-# Minimal example
-
-```python
 from matplotlib import pyplot
 from deoverlap_2d import get_text_dimensions, ode_deoverlap
 
@@ -28,7 +12,7 @@ figure, axes = pyplot.subplots(nrows = 1, ncols = 2, figsize = (8, 4),
 	sharex = True, sharey = True)
 axes[0].set_xlim(-3, 2)
 axes[0].set_ylim(-1, 2)
-text_dims = get_text_dimensions(axes[0], texts, fontsize = 12):w
+text_dims = get_text_dimensions(axes[0], texts, fontsize = 12)
 
 # adjust labels
 deoverlap_xys = ode_deoverlap(init_xys, text_dims,
@@ -46,4 +30,3 @@ axes[1].set_title("After")
 figure.suptitle("Adjust overlapping labels (ode_deoverlap)")
 pyplot.show()
 pyplot.close()
-```
