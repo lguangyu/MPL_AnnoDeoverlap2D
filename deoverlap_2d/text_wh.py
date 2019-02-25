@@ -7,7 +7,7 @@ import matplotlib.pyplot as _pyplot
 
 def get_textobj_dimensions(
 		axes: _matplotlib.axes.Axes,
-		texts: list,
+		texts: list
 	) -> _numpy.ndarray:
 	"""
 	get the dimensions (width, height) of a list of text objects
@@ -27,7 +27,7 @@ def get_textobj_dimensions(
 def _render_textobj_wh(
 		text_obj: _matplotlib.text.Text,
 		_renderer: _matplotlib.backend_bases.RendererBase,
-		_transform: _matplotlib.transforms.CompositeGenericTransform,
+		_transform: _matplotlib.transforms.CompositeGenericTransform
 	) -> tuple:
 	"""
 	get the dimensions (width, height) of a text objects by rendering
@@ -44,7 +44,7 @@ def get_text_dimensions(
 		*,
 		x: float = 0,
 		y: float = 0,
-		**kw,
+		**kw
 	) -> _numpy.ndarray:
 	"""
 	get the rendering dimensions (width, height) of a list of str's

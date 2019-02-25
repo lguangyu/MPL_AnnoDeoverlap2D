@@ -13,7 +13,7 @@ def ode_deoverlap(
 		text_repel_force: float = 1.0,
 		anno_repel_force: float = 1.0,
 		anno_attract_force: float = 1.0,
-		init_noise: float = 0.0,
+		init_noise: float = 0.0
 	) -> _numpy.ndarray:
 	"""
 	deoverlap using ode

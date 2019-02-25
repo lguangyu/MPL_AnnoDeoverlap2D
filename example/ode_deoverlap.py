@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from matplotlib import pyplot
 from deoverlap_2d import get_text_dimensions, ode_deoverlap
 
@@ -25,8 +27,8 @@ for s, a_xy, before_xy, after_xy in zip(texts, anno_xys, init_xys, deoverlap_xys
 		arrowprops = {"arrowstyle": "->", "edgecolor": "#FF8000"})
 	axes[1].annotate(s, a_xy, after_xy, fontsize = 12, color = "#4040FF",
 		arrowprops = {"arrowstyle": "->", "edgecolor": "#4040FF"})
-axes[0].set_title("Before")
-axes[1].set_title("After")
+axes[0].set_title("Inital positions")
+axes[1].set_title("Deoverlapped")
 figure.suptitle("Adjust overlapping labels (ode_deoverlap)")
 pyplot.show()
 pyplot.close()
